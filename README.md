@@ -73,7 +73,7 @@
 5. ขั้นตอนที่5 อ่านค่าจากMemory data register ลงรีจิสเตอร์
 ![รูปภาพlw](Lw5.jpg)
 
-<br>**หัวข้อที่5. Branch of Equal in Multi-cycle**
+### หัวข้อที่5. Branch of Equal in Multi-cycle
 
 <br>[วิดีโอที่5 คำสั่งBEQ ในMulti-cycle](https://youtu.be/Eh2OFieFIFA)
 <br>**คำสั่ง branch of equal คือ การกระโดดแบบมีเงื่อนไข กระโดดเมื่อrs-rt=0 หรือ rsม่ีค่าเท่ากับrt**
@@ -82,7 +82,7 @@
 2. ขั้นตอนที่2 การถอดรหัสคำสั่ง เอาค่าในรีจิสเตอร์ของrs, rt ไปพักไว้ใน A, B
 3. ขั้นตอนที่3 นำค่าที่พักในA,B คำนวณในALUว่า rs-rt=0ไหม ถ้าเท่ากันจะกระโดด ซึ่งกระโดดไปที่ PC=ALUOut
 
-<br>**หัวข้อที่6. CPU controller :Finite State Machine**
+### หัวข้อที่6. CPU controller :Finite State Machine
 
 <br>[วิดีดอที่6 FSM controller ในMUlti-cycle](https://youtu.be/zDQW-HyqBxg)
 ![รูปภาพMulti](https://lings2mi.files.wordpress.com/2012/12/multicycle-datacontrol.jpg?w=848)
@@ -91,7 +91,24 @@
 2. ขั้นตอนที่2 การถอดรหัสคำสั่ง เมื่อ ALUSrcS=0 (คือ PC), ALUSrcB=3 (คือ signext(IR<<2)), ALUOP=0 (คือ add)
 3. ขั้นตอนที่3 คำนวณในALU เมื่อ ALUSrcS=1 (คือ A=Register[$rs]), ALUSrcB=0 (คือ B=Register[$rt]), ALUOP=2 (คือInstruction register[28-26])
 4. ขั้นตอนที่4 เชียนข้อมูลลงรีจิสเตอร์ rd เมื่อ RegWrite=1 (คือ จากALUout ไปที่Register[$rd]), MemtoReg=0 (คือ ALUout), RegDst=1 (คือ rd)
+
 ### หัวข้อที่7. Pipelining
 
 <br>[วิดีโอที่7 Pipelining](https://youtu.be/3Bm1NIazgtc)
+
+![รูปภาพPL](Pl1.jpg)
+
+![รูปภาพPL](Pl2.jpg)
+
+![รูปภาพPL](Pl3.jpg)
+
+![รูปภาพPL](Pl4.jpg)
+
+![รูปภาพPL](Pl5.jpg)
+
+![รูปภาพPL](Pl6.jpg)
+
+![รูปภาพPL](Pl7.jpg)
+
+![รูปภาพPL](Pl8.jpg)
 
